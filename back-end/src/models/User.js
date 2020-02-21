@@ -15,7 +15,19 @@ const userSchema = new Schema(
 		rol: {
 			type: Number,
 			require: true,
+			trim: true,
+
 		},
+		firstName: {
+			type: String,
+			trim: true,
+
+		},
+		lastName: {
+			type: String,
+			trim: true,
+
+		}
 	},
 	{
 		timestamps: true,
