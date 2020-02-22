@@ -4,6 +4,8 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import Item from './../item/Item'
+import Header from './../header/Header'
+
 
 // Estilos
 import './Users.scss'
@@ -25,7 +27,10 @@ export default class Users extends Component {
         const props = this.props;
 
         return (
-            <div className="container-info">
+            <React.Fragment>
+                <Header></Header>
+
+                <div className="container-info">
                 {/* SideBar */}
                 <div className="info">
                     <h2 className="title">{props.title}S</h2>
@@ -60,6 +65,7 @@ export default class Users extends Component {
                     </div>
                 </div>
             </div>
+            </React.Fragment>
         )
     }
 }
