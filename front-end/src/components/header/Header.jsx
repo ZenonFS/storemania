@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import './header.css';
+import './header.scss';
 
 export default class Header extends Component {
     render() {
@@ -9,7 +9,11 @@ export default class Header extends Component {
                     <div className="row">
                         <div className="col">
                         <nav className=" navbar navbar-light ">
-                            <a className="navbar-brand">menu</a>
+                            <div className="burguer navbar-brand">
+                                <div className="line primera"></div>
+                                <div className="line segunda"></div>
+                                <div className="line tercera"></div>
+                            </div>
                             <h1>StoreMania</h1>
                             <form className="form-inline">
                                 <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
