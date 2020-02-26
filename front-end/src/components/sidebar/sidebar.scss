@@ -1,0 +1,27 @@
+@import './../../App.scss';
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 60px;
+    height: 100vh;
+    background: $color-header-2;
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        color: #fff;
+        font-size: 22px;
+
+        &:hover {
+            background: $color-header-1;
+
+        }
+    }
+}
