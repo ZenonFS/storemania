@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Users from './components/users/Users'
 import Header from './components/header/Header'
 import Login from './components/login/Login'
+import registre from './components/registre/registre';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route exact path='/login' component={Login}/>
       <Route path='/users' component={Users}/>
       <Route path='/dashboard' component={Header} />
+      <Route path='/registre' component={registre}/>
     </Switch>
   </Router>
   );

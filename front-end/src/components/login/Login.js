@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+
 import './login.css';
 
 export default class Login extends Component {
@@ -18,14 +20,14 @@ export default class Login extends Component {
                                     </div>
                                     <div className="registrar mr-bottom">
                                         <p >¿No tienes alguna cuenta?  </p>
-                                        <a>Registrate aqui</a>
+                                        <Link to="/registre" >Registrate aqui</Link>
                                     </div>
                                     
                                 </div>
                             </div>
                             <div className="col footer">
                                 <h1>Nombre Autor</h1>
-                                <p>&copy; Derecos Reservados</p>
+                                <p>&copy; Derechos Reservados</p>
                             </div>
                     </div>
                 </div>
