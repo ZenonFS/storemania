@@ -4,24 +4,24 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
-import Item from './../item/Item';
-import Header from './../header/Header';
-import SideBar from './../sidebar/Sidebar';
+import Item from '../item/Item';
+import Header from '../header/Header';
+import SideBar from '../sidebar/Sidebar';
 
 // Estilos
-import './Users.scss';
+import './Grocery.scss';
 
 // Code
-export default class Users extends Component {
+export default class Grocery extends Component {
 	state = {
-		users: [],
+		grocery: [],
 	};
 
 	async componentDidMount() {
-		const res = await axios.get('http://localhost:4000/api/users');
+		const res = await axios.get('http://localhost:4000/api/grocerystore');
 
-		this.setState({ users: res.data });
-		console.log(this.state.users);
+		this.setState({ grocery: res.data });
+		console.log(this.state.grocery);
 	}
 
 	render() {
@@ -34,35 +34,35 @@ export default class Users extends Component {
 				<div className='container-info'>
 					<SideBar></SideBar>
 					<div className='info'>
-						<h2 className='title'>USUARIOS</h2>
+						<h2 className='title'>BODEGAS</h2>
 						<div className='sub'>
 							<div className='total'>
-								<h3>Usuarios Activos:</h3>
+								<h3>Bodegas Activos:</h3>
 								<p>@NumActivos@</p>
 							</div>
 
 							<div className='btn new'>
 								<FontAwesomeIcon icon={faPlusCircle}></FontAwesomeIcon>
-								Nuevo Usuario
+								Nueva Bodega
 							</div>
 						</div>
 						<div className='table'>
 							<div className='header-table'>
-								<h3>Username</h3>
-								<h3>Rol</h3>
+								<h3>Nombre</h3>
+								<h3>Dirección</h3>
 								<h3>Nombres</h3>
 								<h3>Apellidos</h3>
 								<div></div>
 							</div>
-							{this.state.users.map((user) => (
+							{/* {this.state.grocery.map((user) => (
 								<Item
 									key={user._id}
 									username={user.username}
 									rol={user.rol}
-									nombres={user.firstName}
-									apellidos={user.lastName}
+									nombres={user.nombres}
+									apellidos={user.apellidos}
 								/>
-							))}
+							))} */}
 						</div>
 					</div>
 				</div>
